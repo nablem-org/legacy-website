@@ -1,0 +1,21 @@
+#who {
+    margin-top: 3em;
+    width: 100%;
+}
+
+#who h1, p {
+    text-align: center;
+}
+
+#who h1 {
+    font-size: 3em;
+}
+
+#who p {
+    font-size: 1.7em !important;
+}
+
+nav {
+    border-radius: 1em;
+    border-bottom: 5px solid rgba(245, 245, 245, 0.2);
+}

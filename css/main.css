@@ -1,0 +1,264 @@
+.row-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    background-color: black;
+    color: white;
+}
+
+body {
+    margin: 1em;
+}
+
+body #main {
+    margin: 1em;
+}
+
+body #main h1 {
+    font-family: 'Barlow', sans-serif;
+    padding-bottom: .5em;
+}
+
+body #main p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.99em;
+    padding-bottom: 1em;
+    padding-right: 1.5em;
+}
+
+body #main img {
+    padding-top: .5em;
+    padding-bottom: 1em;
+}
+
+.index {
+    position: fixed;
+    padding-bottom: 1em;
+    padding-top: 2em;
+    padding-left: 2em;
+    padding-right: 1em;
+    width: 97%;
+}
+
+.index ul {
+    margin-right: 2em;
+}
+
+.other {
+    padding: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+nav {
+    justify-content: space-between;
+    background-color: black;
+    z-index: 1;
+    top: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    gap: 1em;
+}
+
+nav h1 {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    position: relative;
+    height: 1.25em;
+    font-size: 2em;
+}
+
+* ul {
+    position: relative;
+    padding-bottom: 5px;
+    list-style: none;
+    margin-right: 1em;
+    gap: 1.5em;
+}
+
+* ul a {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 1.5em;
+}
+
+* i {
+    margin-right: .2em;
+}
+
+hr {
+    margin-bottom: 1em;
+}
+
+.active {
+    font-style: italic;
+}
+
+#logo img {
+    margin-left: -.3em;
+    width: 2em;
+    height: auto;
+    border-radius: 50%;
+    border: 5px solid rgb(75, 75, 75);
+}
+
+#banner {
+    background-image: url("../images/Jinrui_Genkai b.png");
+    background-size: cover;
+    background-position: center center;
+    width: 100vw;
+    top: -30px;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+#video {
+    opacity: 0;
+    width: 100vw;
+    top: -30px;
+    height: auto;
+    position: fixed;
+    z-index: -1;
+}
+
+#content {
+    background-color: black;
+    padding: 2em;
+    padding-left: 1em;
+    padding-right: 1em;
+    z-index: 0;
+    width: 100%;
+    position: relative;
+    top: 450px;
+}
+
+#values, #music ul {
+    position: relative;
+    background-color: #000;
+    margin-left: 2.5em;
+    margin-bottom: 1em;
+}
+
+#values li, #music ul li {
+    font-family: 'Unbounded', cursive;
+    background-color: #000;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, .1);
+    border-radius: 1em;
+    transition: transform 0.5s;
+    list-style: georgian;
+    padding: 10px;
+    width: 100%;
+}
+
+#values li:hover, #music ul li:hover {
+    transform: scale(1.05);
+    background-color: #262626;
+}
+
+#music ul li div:hover {
+    gap: 1em;
+    padding: .5em;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    display: none;
+}
+
+#patreon a {
+    display: flex;
+    flex-direction: row;
+    gap: .6em;
+}
+
+#patreon svg {
+    position: relative;
+    top: -.4em;
+    width: 1.3em;
+    height: auto;
+    fill: white;
+}
+
+#team {
+    gap: 3em;
+    display: flex;
+    margin-top: 1em;
+    flex-direction: row;
+    justify-content: baseline;
+}
+
+#team div {
+    display: flex;
+    flex-direction: column;
+}
+
+#team .image {
+    margin-right: 30%;
+    margin-bottom: 1.5em;
+}
+
+#team .image a {    
+    border-radius: 15%;
+    border: .35em solid white;
+    background-color: white;
+}
+
+#team .image img {
+    border-radius: 15%;
+    width: 100%;
+    padding: 0;
+}
+
+#team .description h1, h2, h3 {
+    font-family: 'Unbounded', cursive;
+    margin-bottom: .5em;
+    padding: 0;
+}
+
+#team .description h1 {
+    font-size: 1.5em;
+}
+
+#team .description h2 {
+    font-size: 1.2em;
+}
+
+#team .description p {
+    font-size: 1em;
+    padding: 0 !important;
+}
+
+#team + hr {
+    margin-top: 2em;
+    width: 75%;
+}
+
+#foot {
+    margin-top: 1em;
+}
+
+#foot ul {
+    flex-direction: row;
+    display: flex;
+    gap: 1em;
+}
+
+#foot ul a {
+    font-family: 'Barlow', sans-serif;
+    font-size: 1em;
+}

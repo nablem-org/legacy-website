@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="./css/games.css">
+    <link rel="shortcut icon" href="./images/logo b.png" type="image/x-icon">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Barlow&family=Ubuntu+Condensed&family=Unbounded&family=Poppins&family=Source+Code+Pro&family=Fira+Code:wght@100;400&display=swap'); </style>
+    <script src="./js/utils.js"></script>
+    <script src="./js/games.js"></script>
+    <title>ISO Studios</title>
+</head>
+<body>
+    <nav class="row-flex other">
+        <a class="row-flex" id="logo" href="#">
+            <img src="./images/logo b.png" alt="ISO Studios Logo" />
+            <h1>ISO Studios</h1>
+        </a>
+
+        <ul class="row-flex" id="nav">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="about.html">About Us</a>
+            </li>
+
+            <li class="active">
+                <a href="games.html">Games</a>
+            </li>
+
+            <li>
+                <a href="#">Our Work</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="main">
+        <div id="ASIC">
+            <h1 id="title" class="typing">
+                <span>A.S.I.C. ()</span> Artificial Spark Institute of Corporeal Matter
+            </h1>
+            <div id="wrapper">
+                <video playsinline autoplay muted loop id="asic">
+                    <source src="./resources/A.S.I.C.mp4" type="video/mp4">
+                </video>
+                <video playsinline autoplay muted loop id="other" class="invisible">
+                    <source src="./resources/A.S.I.C_2.mp4" type="video/mp4">
+                </video>
+                <video id="creepy" class="invisible" playsinline autoplay muted loop controls>
+                    <source src="./resources/0010-0096.mp4" type="video/mp4">
+                </video>
+                <iframe src="./resources/paper.pdf" frameborder="0" width="100%" class="invisible" id="paper"></iframe>
+                <div id="abbrv">
+                    <h1 id="artificial" class="invisible">
+                        Artificial
+                    </h1>
+                    <h1 class="invisible">
+                        Spark 
+                    </h1>
+                    <h1 class="invisible">
+                        Institute of
+                    </h1>
+                    <h1 id="corporeal" class="invisible">
+                        Corporeal Matter
+                    </h1>
+                    <button>
+                        Join Us!
+                    </button>
+                    <div id="passcode">
+                        <p>Enter Code:</p>
+                        <input type="text">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

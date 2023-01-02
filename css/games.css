@@ -1,0 +1,100 @@
+:root {
+    --bg-color: black;
+    --typewriterSpeed: 1s;
+    --typewriterCharacters: 8;
+}
+
+.invisible {
+    display: none;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+}
+
+#title {
+    font-size: 2em;
+    position: relative;
+    width: max-content;
+}
+
+#creepy {
+    width: 40vw;
+    height: auto;
+    z-index: 1;
+}
+
+#passcode {
+    display: flex;
+    flex-direction: columnp;
+}
+
+#abbrv h1 {
+    padding-bottom: 0.25em !important;
+
+    /* Adds a list-like hoverable */
+    font-size: 2em;
+    position: relative;
+    width: max-content;
+    background-color: #000;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, .1);
+    transition: transform 0.5s;
+    list-style: georgian;
+}
+
+#abbrv h1:hover {
+    transform: scale(1.2);
+    background-color: #262626;
+}
+
+/* Typewriter */
+#title::before,
+#title::after,
+#abbrv h1::before,
+#abbrv h1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+  
+#title.typing::before,
+#abbrv h1.typing::before {
+    background: var(--bg-color);
+    animation: typewriter var(--typewriterSpeed)
+        steps(var(--typewriterCharacters)) 0s forwards;
+}
+
+#title.typing::after,
+#abbrv h1.typing::after {
+    width: 0.5em;
+    height: 1.3em;
+    background: white;
+    animation: typewriter var(--typewriterSpeed)
+        steps(var(--typewriterCharacters)) 0s forwards,
+        blink 750ms steps(var(--typewriterCharacters)) infinite;
+}
+
+@keyframes typewriter {
+    to {
+        left: 100%;
+    }
+}
+
+@keyframes blink {
+    to {
+        background: transparent;
+    }
+}
+
+button {
+    font-family: 'Unbounded', cursive;
+    background-color: white;
+    border-radius: 1em;
+    font-size: 2em;
+    padding: .6em 1em;
+}
