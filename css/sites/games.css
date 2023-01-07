@@ -79,6 +79,58 @@
         blink 750ms steps(var(--typewriterCharacters)) infinite;
 }
 
+#factory {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+#factory div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#factory img {
+    margin-top: 1em;
+    width: 40em;
+}
+
+#factory p {
+    text-align: start !important;
+}
+
+#yoru {
+    position: relative;
+    bottom: -200px;
+    right: 0;
+}
+
+#speaker {
+    top: 11.5%;
+    right: .5%;
+    position: fixed;
+    z-index: 1;
+    background-color: white;
+    border-radius: 2em;
+    padding: .5em;
+}
+
+#speaker svg {
+    position: relative;
+    top: 2.5px;
+    width: 2em;
+    fill: black;
+}
+
+button {
+    font-family: 'Unbounded', cursive;
+    background-color: white;
+    border-radius: 1em;
+    font-size: 2em;
+    padding: .6em 1em;
+}
+
 @keyframes typewriter {
     to {
         left: 100%;
@@ -89,12 +141,4 @@
     to {
         background: transparent;
     }
-}
-
-button {
-    font-family: 'Unbounded', cursive;
-    background-color: white;
-    border-radius: 1em;
-    font-size: 2em;
-    padding: .6em 1em;
 }

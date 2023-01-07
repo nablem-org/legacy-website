@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/Barlow-Regular.woff2");
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/Poppins-Regular.woff2");
+}
+
+@font-face {
+    font-family: 'Ubuntu Condensed';
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/UbuntuCondensed-Regular.woff2");
+}
+
+@font-face {
+    font-family: 'Unbounded';
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/Unbounded.woff2");
+}

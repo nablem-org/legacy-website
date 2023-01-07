@@ -1,15 +1,15 @@
 window.onload = function () {
-    fadeAudio('./resources/1_3.mp3');
-
     /* Loads an keyboard type SFX within each header typing animation */
     var sfx = new Audio('./resources/sfx.mp3');
     sfx.loop = false;
     sfx.volume = 1;
 
+    speaker(fadeAudio('./resources/1_3.mp3'));
+
+    // Loads a typewriter animation on each header
     var abbrv = document.getElementById("abbrv");
     var headers = abbrv.getElementsByTagName("h1");
 
-    // Loads a typewriter animation on each header
     var title = document.getElementById("title");
     var i = 0; var eachWordInterval = setInterval(eachWord, 1000);
 
@@ -44,6 +44,7 @@ window.onload = function () {
         newASICVideo.classList.remove("invisible");
     }
 
+    // If "Corporeal" is clicked, a fake scientific paper shows up
     var corporealMatter = document.getElementById("corporeal")
     corporealMatter.onclick = function () {
         asicVideo.classList.add("invisible");
@@ -53,9 +54,20 @@ window.onload = function () {
         }, 3000);
     }
 
+    // If "Artificial" is clicked, that creepy video shows up
     var creepyVideo = document.getElementById("creepy")
     var artificial = document.getElementById("artificial")
     artificial.onclick = function() {
         creepyVideo.classList.remove("invisible");
     }
+
+    window.onscroll = function(ev) {
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+            // you're at the bottom of the page
+            console.log("Bottom!")
+            // var yoru = document.getElementById("yoru")
+            // console.log(yoru)
+            // yoru.style.transform = "translateY(250)"
+        }
+    };
 }

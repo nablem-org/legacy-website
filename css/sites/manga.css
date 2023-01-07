@@ -1,0 +1,31 @@
+body #main {
+    margin: 2em !important;
+}
+
+/* .center {
+    margin-top: 3em;
+    width: 100%;
+}
+
+.center h1, p {
+    text-align: center;
+}
+
+.center h1 {
+    font-size: 3em;
+}
+
+.center p {
+    font-size: 1.7em !important;
+} */
+
+.collage {
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+}
+
+.collage div img {
+    width: 30%;
+    height: auto;
+}

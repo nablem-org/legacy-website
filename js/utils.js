@@ -54,4 +54,25 @@ function fadeAudio(fileName) {
 
     // Increments in volume by 0.01 every 200ms up to 0.65
     fade("Volume", audio, 0.01, 0.65, 200, true); audio.play(); 
+
+    return audio
+}
+
+function speaker(audio) {
+    var speaker = document.getElementById("speaker");
+    var noSpeakerIcon = document.getElementById("nospeak");
+    var speakerIcon = document.getElementById("speak");
+
+    speaker.onclick = function () {
+        if (!audio.paused) {
+            speakerIcon.classList.add("invisible");
+            noSpeakerIcon.classList.remove("invisible");
+            audio.volume = 0;
+            audio.pause();
+        } else {
+            noSpeakerIcon.classList.add("invisible");
+            speakerIcon.classList.remove("invisible");
+            audio.play();
+        }
+    }
 }

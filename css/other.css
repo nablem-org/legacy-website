@@ -1,0 +1,15 @@
+nav {
+    border-radius: 1em;
+    border-bottom: 5px solid rgba(245, 245, 245, 0.2);
+}
+
+footer {
+    margin: 1em;
+    /* position: absolute;
+    top: 100%; */
+}
+
+footer hr {
+    color: gray;
+    height: 2px;
+}

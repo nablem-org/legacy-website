@@ -5,6 +5,10 @@
     align-content: center;
 }
 
+.invisible {
+    display: none;
+}
+
 * {
     margin: 0px;
     padding: 0px;
@@ -116,7 +120,7 @@ hr {
 }
 
 #banner {
-    background-image: url("../images/Jinrui_Genkai b.png");
+    background-image: url("../images/banner.png");
     background-size: cover;
     background-position: center center;
     width: 100vw;
@@ -146,11 +150,15 @@ hr {
     top: 450px;
 }
 
+#values li:hover {
+    padding-left: 1.1em;
+}
+
 #values, #music ul {
     position: relative;
     background-color: #000;
     margin-left: 2.5em;
-    margin-bottom: 1em;
+    margin-bottom: .5em;
 }
 
 #values li, #music ul li {
@@ -159,14 +167,27 @@ hr {
     box-shadow: 0 5px 25px rgba(0, 0, 0, .1);
     border-radius: 1em;
     transition: transform 0.5s;
-    list-style: georgian;
+    list-style: lower-roman;
     padding: 10px;
-    width: 100%;
+    width: 90%;
 }
 
 #values li:hover, #music ul li:hover {
     transform: scale(1.05);
     background-color: #262626;
+}
+
+#music {
+    margin-bottom: -.5em;
+}
+
+#music ul li div {
+    transition: cubic-bezier(1, 0, 1, 1) 500ms;
+}
+
+#music ul li div audio {
+    opacity: 0;
+    display: none;
 }
 
 #music ul li div:hover {
@@ -176,17 +197,23 @@ hr {
     flex-direction: column;
 }
 
+#music ul li div:hover audio {
+    opacity: 1;
+    display: block;
+    animation: slide-up 1000ms forwards, fade-in 500ms forwards;
+}
+
 input {
     display: none;
 }
 
-#patreon a {
+.link a {
     display: flex;
     flex-direction: row;
     gap: .6em;
 }
 
-#patreon svg {
+.link svg {
     position: relative;
     top: -.4em;
     width: 1.3em;
@@ -205,11 +232,12 @@ input {
 #team div {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 #team .image {
-    margin-right: 30%;
     margin-bottom: 1.5em;
+    width: 70%;
 }
 
 #team .image a {    
@@ -224,7 +252,34 @@ input {
     padding: 0;
 }
 
-#team .description h1, h2, h3 {
+#wolfie {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+#wolfie h2:first-child {
+    margin-bottom: 1em;
+}
+
+#wolfie .image {
+    margin-bottom: 1.5em;
+    width: 100%;
+}
+
+#wolfie .image img {
+    padding: 0;
+    padding-bottom: .4em;
+    border-radius: 15%;
+    border: .35em solid white;
+    background-color: white;
+}
+
+#wolfie .description h1 {
+    font-family: 'Unbounded', cursive;
+}
+
+#team .description h1, h2 {
     font-family: 'Unbounded', cursive;
     margin-bottom: .5em;
     padding: 0;
@@ -261,4 +316,81 @@ input {
 #foot ul a {
     font-family: 'Barlow', sans-serif;
     font-size: 1em;
+}
+
+#pop a {
+    font-family: 'Unbounded', sans-serif;
+    background-color: rgba(255, 255, 255, 0.99);
+    border-radius: 1em;
+    box-shadow: #3b3b3b8c 1em 1em;
+    position: fixed;
+    padding: 1em 2em;
+    font-size: 1em;
+    color: black;
+    width: 450px;
+    z-index: 1;
+    bottom: 2.5%;
+    right: .5%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#pop img {
+    width: 10em;
+}
+
+#pop a {
+    color: black;
+}
+
+#speaker {
+    top: 11.5%;
+    right: .5%;
+    position: fixed;
+    z-index: 1;
+    background-color: white;
+    border-radius: 2em;
+    padding: .5em;
+}
+
+#speaker svg {
+    position: relative;
+    top: 2.5px;
+    width: 2em;
+    fill: black;
+}
+
+#load, #loadNext {
+    position: absolute;
+    top: 30%;
+    left: 37.5%;
+    margin: -25px 0 0 -25px; /* Apply negative top and left margins to truly center the element */
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
 }

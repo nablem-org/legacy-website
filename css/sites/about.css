@@ -1,6 +1,15 @@
+body #main {
+    margin: 2em !important;
+}
+
 #who {
     margin-top: 3em;
     width: 100%;
+}
+
+#who video {
+    position: absolute;
+    left: 37.5%;
 }
 
 #who h1, p {
@@ -13,9 +22,4 @@
 
 #who p {
     font-size: 1.7em !important;
-}
-
-nav {
-    border-radius: 1em;
-    border-bottom: 5px solid rgba(245, 245, 245, 0.2);
 }
