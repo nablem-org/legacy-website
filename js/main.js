@@ -46,7 +46,7 @@ function checkIfLoad() {
 
 window.onload = async function () {
     checkIfLoad();
-    speaker(fadeAudio('./resources/1_1.mp3'));
+    speaker(fadeAudio('../resources/1_1.mp3'));
 
     // Fades out image by 0.025 every 100ms from 1 to 0
     fadeElement("Image", "banner", 1, 0, 0.025, 100, false);
