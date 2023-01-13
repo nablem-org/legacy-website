@@ -1,26 +1,18 @@
 function loadIn() {
     setTimeout(function () {
-        //
-        var loadVideo = document.getElementById("load");
-        loadVideo.classList.add("invisible");
-        //
         var loadNextVideo = document.getElementById("loadNext");
-        loadNextVideo.classList.remove("invisible");
-        loadNextVideo.play();
+
+        fadeElement("Load Video", "loadNext", 1, 0, 0.1, 50, false);
 
         setTimeout(function () {
-            fadeElement("Load Video", "loadNext", 1, 0, 0.1, 50, false);
-
-            setTimeout(function () {
-                loadNextVideo.classList.add("invisible");
-                //
-                var body = document.getElementById("body");
-                body.classList.remove("invisible");
-                //
-                fadeElement("Body", "body", 0, 1, 0.1, 50, true);
-            }, 500);
-        }, 3000);
-    }, 4000);
+            loadNextVideo.classList.add("invisible");
+            //
+            var body = document.getElementById("body");
+            body.classList.remove("invisible");
+            //
+            fadeElement("Body", "body", 0, 1, 0.1, 50, true);
+        }, 500);
+    }, 3000);
 }
 
 function checkIfLoad() {
@@ -33,8 +25,8 @@ function checkIfLoad() {
 
     if (cookieValue !== undefined) {
         var body = document.getElementById("body");
-        var loadVideo = document.getElementById("load");
-        loadVideo.classList.add("invisible");
+        var loadNextVideo = document.getElementById("loadNext");
+        loadNextVideo.classList.add("invisible");
         body.classList.remove("invisible");
     } else {
         // Otherwise, adds the cookie

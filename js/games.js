@@ -1,10 +1,10 @@
 window.onload = function () {
     /* Loads an keyboard type SFX within each header typing animation */
-    var sfx = new Audio('./resources/sfx.mp3');
+    var sfx = new Audio('../resources/sfx.mp3');
     sfx.loop = false;
     sfx.volume = 1;
 
-    speaker(fadeAudio('./resources/1_3.mp3'));
+    speaker(fadeAudio('../resources/1_3.mp3'));
 
     // Loads a typewriter animation on each header
     var abbrv = document.getElementById("abbrv");

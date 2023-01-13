@@ -113,6 +113,7 @@ hr {
 
 #logo img {
     margin-left: -.3em;
+    padding: .25em;
     width: 2em;
     height: auto;
     border-radius: 50%;
