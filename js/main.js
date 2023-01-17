@@ -12,7 +12,7 @@ function loadIn() {
             //
             fadeElement("Body", "body", 0, 1, 0.1, 50, true);
         }, 500);
-    }, 3000);
+    }, 4000);
 }
 
 function checkIfLoad() {
@@ -34,6 +34,14 @@ function checkIfLoad() {
         document.cookie = "load=true; SameSite=strict; Secure";
         loadIn();
     }
+}
+
+function dead() {
+	console.log("Hey!");
+	var main = document.getElementById("main");
+	main.classList.toggle("blur");
+	var pop = document.getElementById("popup");
+	pop.classList.toggle("active");
 }
 
 window.onload = async function () {

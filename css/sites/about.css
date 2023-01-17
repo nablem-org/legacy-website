@@ -12,7 +12,7 @@ body #main {
     left: 37.5%;
 }
 
-#who h1, p {
+#who h1, #who p {
     text-align: center;
 }
 
@@ -22,4 +22,188 @@ body #main {
 
 #who p {
     font-size: 1.7em !important;
+}
+
+#content {
+    background-color: black;
+    padding: 1em;
+    padding-left: 0em;
+    padding-right: 0em;
+    z-index: -1;
+    width: 99%;
+}
+
+#values li:hover {
+    padding-left: 1.1em;
+}
+
+#values, #music ul {
+    position: relative;
+    background-color: #000;
+    margin-left: 2.5em;
+    margin-bottom: .5em;
+}
+
+#values li, #music ul li {
+    font-family: 'Unbounded', cursive;
+    background-color: #000;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, .1);
+    border-radius: 1em;
+    transition: transform 0.5s;
+    list-style: lower-roman;
+    padding: 10px;
+    width: 90%;
+}
+
+#values li:hover, #music ul li:hover {
+    transform: scale(1.05);
+    background-color: #262626;
+}
+
+#music {
+    margin-bottom: -.5em;
+}
+
+#music h3 {
+    font-family: 'Unbounded', sans-serif;
+}
+
+#music ul li div {
+    transition: cubic-bezier(1, 0, 1, 1) 500ms;
+}
+
+#music ul li div audio {
+    opacity: 0;
+    display: none;
+}
+
+#music ul li div:hover {
+    gap: 1em;
+    padding: .5em;
+    display: flex;
+    flex-direction: column;
+}
+
+#music ul li div:hover audio {
+    opacity: 1;
+    display: block;
+    animation: slide-up 1000ms forwards, fade-in 500ms forwards;
+}
+
+input {
+    display: none;
+}
+
+.link a {
+    display: flex;
+    flex-direction: row;
+    gap: .6em;
+}
+
+.link svg {
+    position: relative;
+    top: -.4em;
+    width: 1.3em;
+    height: auto;
+    fill: white;
+}
+
+#team {
+    gap: 3em;
+    display: flex;
+    margin-top: 1em;
+    flex-direction: row;
+    justify-content: baseline;
+}
+
+#team div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#team .image {
+    margin-bottom: 1.5em;
+    width: 70%;
+}
+
+#team .image a {
+    border-radius: 15%;
+    border: .35em solid white;
+    background-color: white;
+}
+
+#team .image img {
+    border-radius: 15%;
+    width: 100%;
+    padding: 0;
+}
+
+#wolfie {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+#wolfie h2:first-child {
+    margin-bottom: 1em;
+}
+
+#wolfie .image {
+    margin-bottom: 1.5em;
+    width: 100%;
+}
+
+#wolfie .image img {
+    padding: 0;
+    padding-bottom: .4em;
+    border-radius: 15%;
+    border: .35em solid white;
+    background-color: white;
+}
+
+#wolfie .description h1 {
+    font-family: 'Unbounded', cursive;
+}
+
+#team .description h1, h2 {
+    font-family: 'Unbounded', cursive;
+    margin-bottom: .5em;
+    padding: 0;
+}
+
+#team .description h1 {
+    font-size: 1.5em;
+}
+
+#team .description h2 {
+    font-size: 1.2em;
+}
+
+#team .description p {
+    font-size: 1em;
+    padding: 0 !important;
+}
+
+#team + hr {
+    margin-top: 2em;
+    width: 75%;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
 }

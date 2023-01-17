@@ -1,3 +1,7 @@
+.other {
+    padding: 1em;
+}
+
 nav {
     border-radius: 1em;
     border-bottom: 5px solid rgba(245, 245, 245, 0.2);
@@ -5,11 +9,24 @@ nav {
 
 footer {
     margin: 1em;
-    /* position: absolute;
-    top: 100%; */
 }
 
 footer hr {
     color: gray;
     height: 2px;
+}
+
+#foot {
+    margin-top: 1em;
+}
+
+#foot ul {
+    flex-direction: row;
+    display: flex;
+    gap: 1em;
+}
+
+#foot ul a {
+    font-family: 'Barlow', sans-serif;
+    font-size: 1em;
 }

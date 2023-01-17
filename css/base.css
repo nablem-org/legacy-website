@@ -1,0 +1,104 @@
+.row-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+}
+
+.invisible {
+    display: none;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    background-color: black;
+    color: white;
+}
+
+body {
+    margin: 1em;
+}
+
+body #main {
+    margin: 1em;
+}
+
+body #main h1 {
+    font-family: 'Barlow', sans-serif;
+    padding-bottom: .5em;
+}
+
+body #main p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.99em;
+    padding-bottom: 1em;
+    padding-right: 1.5em;
+}
+
+body #main img {
+    padding-top: .5em;
+    padding-bottom: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+nav {
+    justify-content: space-between;
+    background-color: black;
+    z-index: 1;
+    top: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    gap: 1em;
+}
+
+nav h1 {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    position: relative;
+    height: 1.25em;
+    font-size: 2em;
+}
+
+* ul {
+    position: relative;
+    padding-bottom: 5px;
+    list-style: none;
+    margin-right: 1em;
+    gap: 1.5em;
+}
+
+* ul a {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 1.5em;
+}
+
+* i {
+    margin-right: .2em;
+}
+
+hr {
+    margin-bottom: 1em;
+}
+
+.active {
+    font-style: italic;
+}
+
+#logo img {
+    margin-left: -.3em;
+    padding: .25em;
+    width: 2em;
+    height: auto;
+    border-radius: 50%;
+    border: 5px solid rgb(75, 75, 75);
+}
