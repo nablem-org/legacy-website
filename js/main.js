@@ -2,7 +2,7 @@ function loadIn() {
     setTimeout(function () {
         var loadNextVideo = document.getElementById("loadNext");
 
-        fadeElement("Load Video", "loadNext", 1, 0, 0.1, 50, false);
+        fadeElement("Load Video", "loadNext", 1, 0, 0.1, 25, false);
 
         setTimeout(function () {
             loadNextVideo.classList.add("invisible");
@@ -37,15 +37,23 @@ function checkIfLoad() {
 }
 
 function dead() {
-	console.log("Hey!");
 	var main = document.getElementById("main");
 	main.classList.toggle("blur");
 	var pop = document.getElementById("popup");
 	pop.classList.toggle("active");
 }
 
+function jinrui() {
+	var main = document.getElementById("main");
+	main.classList.toggle("blur");
+	var pop = document.getElementById("popup");
+	pop.classList.toggle("active");
+
+}
+
 window.onload = async function () {
-    checkIfLoad();
+    // checkIfLoad();
+	loadIn();
     speaker(fadeAudio('../resources/1_1.mp3'));
 
     // Fades out image by 0.025 every 100ms from 1 to 0

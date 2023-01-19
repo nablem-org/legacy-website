@@ -1,2 +1,13 @@
-**/main
+# Assets
+html
 **/old
+fonts/ttf
+
+# Go
+*/main
+
+# Rust
+target
+debug
+
+Cargo.lock

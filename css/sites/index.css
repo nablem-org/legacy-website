@@ -63,6 +63,7 @@
     position: absolute;
     top: 30%;
     left: 37.5%;
+	z-index: 1;
     margin: -25px 0 0 -25px; /* Apply negative top and left margins to truly center the element */
 }
 

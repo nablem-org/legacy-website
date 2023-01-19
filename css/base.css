@@ -102,3 +102,23 @@ hr {
     border-radius: 50%;
     border: 5px solid rgb(75, 75, 75);
 }
+
+footer {
+    margin-top: 1em;
+}
+
+footer hr {
+    color: gray;
+    height: 2px;
+}
+
+footer ul {
+    flex-direction: row;
+    display: flex;
+    gap: 1em;
+}
+
+footer ul a {
+    font-family: 'Barlow', sans-serif;
+    font-size: 1em;
+}

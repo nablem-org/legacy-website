@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block style %}index{% endblock %}
+
+{% block head %}
+    <script src="../js/utils.js"></script>
+    <script src="../js/main.js"></script>
+{% endblock %}
+
+{% block pre %}
+	<video id="loadNext" autoplay>
+        <source src="../resources/loadNext.mp4" type="video/mp4">
+    </video>
+{% endblock %}
+
+{% block nav %}index{% endblock %}
+
+{% block body %}
+	<div id="banner"></div>
+
+	<div>
+		<img id="video" src="../images/background.png" alt="Background">
+	</div>
+
+	<div id="content">
+		{% include "ui.html" %}
+		{% include "footer.html" %}
+	</div>
+
+	<div id="popup">
+		<ul>
+			<li>Chapter 1</li>
+			<li>Chapter 2</li>
+			<li>Chapter 3</li>
+		</ul>
+	</div>
+
+	<div id="speaker">
+		{% include "../svg/speaker.svg" %}
+		{% include "../svg/no-speaker.svg" %}
+	</div>
+{% endblock %}
