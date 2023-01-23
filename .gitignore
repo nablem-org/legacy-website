@@ -1,13 +1,14 @@
 # Assets
-html
+html/
 **/old
-fonts/ttf
+fonts/ttf/
 
 # Go
-*/main
+server/
 
 # Rust
-target
-debug
+target/
+debug/
+src/archive.rs
 
 Cargo.lock

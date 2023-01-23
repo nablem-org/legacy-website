@@ -8,9 +8,14 @@ img {
 }
 
 button {
+	margin-top: 1.4em;
+}
+
+button a {
 	font-family: 'Unbounded', cursive;
 	background-color: white;
 	border-radius: 1em;
 	font-size: 2em;
 	padding: .6em 1em;
+	color: black;
 }
