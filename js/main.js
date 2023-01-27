@@ -37,10 +37,14 @@ function checkIfLoad() {
 }
 
 function dead() {
-	var main = document.getElementById("main");
-	main.classList.toggle("blur");
+    var body = document.getElementsByTagName("body")[0];
+	body.style.overflow = "hidden";
 	var pop = document.getElementById("popup");
-	pop.classList.toggle("active");
+	pop.classList.toggle("visible");
+	var music = new Audio("../resources/isolated.mp3");
+	music.volume = 0.2;
+	music.fastSeek(15);
+	music.play();
 }
 
 function jinrui() {
@@ -52,7 +56,7 @@ function jinrui() {
 }
 
 window.onload = async function () {
-    // checkIfLoad();
+	checkIfLoad();
 	loadIn();
     speaker(fadeAudio('../resources/1_1.mp3'));
 
@@ -61,4 +65,7 @@ window.onload = async function () {
 
     // Fades in video by 0.05 every 200ms from 0 to 1
     fadeElement("Video", "video", 0, 1, 0.05, 200, true);
+
+	let deadElement = document.getElementById("dead planet");
+	deadElement.onclick = dead;
 }
