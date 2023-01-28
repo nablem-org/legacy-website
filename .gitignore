@@ -2,6 +2,7 @@
 html/
 **/old
 fonts/ttf/
+templates/ui.html
 
 # Go
 server/

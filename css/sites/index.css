@@ -123,11 +123,12 @@
 	padding-bottom: 1em;
 }
 
-#popup {
+.popup {
 	font-family: 'Unbounded', sans-serif;
 	box-shadow: 0 5px 30px rgba(0, 0, 0, .3);
 	transform: translate(2%, 20%);
 	margin: -25px 0 0 -25px;
+	display: none;
 	position: fixed;
 	border-radius: 1em;
 	background: #151515;
@@ -139,7 +140,7 @@
 	transition: .5s;
 }
 
-#popup img {
+.popup img {
 	width: 100%;
 	height: 20vw;
 	object-fit: cover;
@@ -147,24 +148,24 @@
 	border-radius: 1em;
 }
 
-#popup ul {
+.popup ul {
 	text-align: right;
 }
 
-#popup li {
+.popup li {
 	margin-bottom: .5em;
 }
 
-#popup p {
+.popup p {
 	width: 24em;
 	font-style: italic;
 }
 
-#popup h3 {
+.popup h3 {
 	margin-bottom: .5em;
 }
 
-#popup #inner {
+.popup #inner {
 	margin: 1em;
 	background: #282727;
 	border-radius: 1em;
@@ -173,10 +174,31 @@
 	top: -5vw;
 }
 
-#popup.visible {
+.popup.visible {
 	transform: translate(2%, 20%);
+	display: block;
 	transition: .5s;
 	opacity: 1;
+}
+
+.popup li {
+    font-family: 'Unbounded', cursive;
+    background-color: #272727;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, .1);
+    border-radius: 1em;
+    transition: transform 0.5s;
+    list-style: none;
+    padding: 10px;
+	padding-right: 2em;
+}
+
+.popup li:hover {
+    transform: scale(1.05);
+    background-color: #1c1c1c;
+}
+
+.popup video {
+	border-radius: 1em;
 }
 
 #main.blur {
