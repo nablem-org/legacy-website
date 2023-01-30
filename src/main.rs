@@ -15,10 +15,6 @@ struct Index {}
 struct AboutUs {}
 
 #[derive(Template)]
-#[template(path = "subscription.html")]
-struct Subscription {}
-
-#[derive(Template)]
 #[template(path = "games.html")]
 struct Games {}
 
@@ -38,7 +34,6 @@ fn render() -> BoxError {
     // Renders each template into HTML, and writes the output into a file
     writeToFile(Index {}.render()?, "index")?;
     writeToFile(AboutUs {}.render()?, "about")?;
-    writeToFile(Subscription {}.render()?, "subscription")?;
     writeToFile(Games {}.render()?, "games")?;
 
     // Propagates any error

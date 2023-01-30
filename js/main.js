@@ -110,32 +110,25 @@ window.onload = async function () {
 		obj.element.onclick = () => onItemClicked(item, obj);
 	}
 
+	let closeButtons = document.getElementsByClassName("x");
+	for (let x of closeButtons) {
+		x.onclick = () => x.parentElement.classList.toggle("visible");
+	}
+
 	let xenonChapter = document.getElementById("chapter-1");
 	xenonChapter.onclick = () => {
-		let boom = document.getElementById("boom");
-		boom.classList.toggle("invisible");
-		boom.play();
+		let preview = document.getElementsByClassName("preview")[0];
+		preview.classList.toggle("invisible");
+		preview.getElementsByTagName("video")[0].play();
 
 		songs.thunder.audio.volume = 0.05;
 		songs.thunder.audio.play();
 
+		/*
 		let xenon = document.getElementById(items.xenon.popupId);
-		xenon.style.top = "-50%";
-		console.log(xenon.style.top);
-
-		var interval = setInterval(loop, 1000);
-
-		function loop() {
-			var duration = boom.duration;
-			var time = boom.currentTime;
-			if (duration == time) {
-				console.log("Finished!");
-				boom.style.filter = "blur(.5em)";
-				songs.thunder.pause();
-				clearInterval(interval);
-			}
-			console.log("Here!");
-		}
+		let xenonInner = xenon.querySelector("#inner");
+		xenonInner.style.top = "-50%";
+		*/
 	}
 }
 
