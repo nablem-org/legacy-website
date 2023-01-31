@@ -136,10 +136,20 @@ section div h3 {
 	background: #151515;
 	padding: 2em;
 	opacity: 0;
-	top: 2.5%;
+	top: 1.75%;
 	left: 10%;
 	width: 75%;
 	transition: .5s;
+	overflow: scroll;
+	max-height: 72.5vh;
+	height: 72.5vh;
+}
+
+.popup .x {
+	position: relative;
+	fill: white;
+	width: 1em;
+	left: 100%;
 }
 
 .popup img {
@@ -167,7 +177,7 @@ section div h3 {
 	margin-bottom: .5em;
 }
 
-.popup #inner {
+.popup .inner {
 	margin: 1em;
 	background: #282727;
 	border-radius: 1em;
@@ -199,8 +209,67 @@ section div h3 {
 	background-color: #1c1c1c;
 }
 
-.popup video {
+.popup .rating {
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 1em;
+	gap: 0.5em;
+}
+
+.popup .rating svg {
+	fill: yellow;
+	width: 1em;
+}
+
+.popup .preview {
+	margin-bottom: 2em;
+}
+
+.popup .preview video {
+	margin-bottom: 1em;
 	border-radius: 1em;
+	width: 48em;
+}
+
+/* Collapsible comments section; adapted from [1 & 2] */
+.popup .comments {
+}
+
+.popup .comments .content {
+	padding: 0 10px;
+	max-height: 0;
+	overflow: hidden;
+	transition: all 0.3s ease;
+}
+
+.popup .comments input {
+	display: none;
+}
+
+.popup .comments label:after {
+	margin-left: 10px;
+	content: '+';
+}
+
+.popup .comments input:checked + label:after {
+	content: "\2013";
+}
+
+.popup .comments input:checked + label + .content {
+	max-height: 200px;
+	padding: 10px 10px 20px;
+}
+
+.popup .comment {
+}
+
+.popup .comment .profile {
+}
+
+.popup .profile img {
+	border-radius: 1em;
+	width: 1em;
+	height: auto;
 }
 
 main.blur {
@@ -214,3 +283,8 @@ h2 {
 	margin-bottom: .5em;
 	padding: 0;
 }
+
+/* References:
+	* [1]: https://youtube.com/watch?v=RvpYnUZRquw
+	* [2]: https://youtube.com/watch?v=fSkhTd4rpDo
+*/
