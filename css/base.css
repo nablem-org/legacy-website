@@ -23,23 +23,23 @@ body {
     margin: 1em;
 }
 
-body #main {
+body main {
     margin: 1em;
 }
 
-body #main h1 {
+body main h1 {
     font-family: 'Barlow', sans-serif;
     padding-bottom: .5em;
 }
 
-body #main p {
+body main p {
     font-family: 'Poppins', sans-serif;
     font-size: 0.99em;
     padding-bottom: 1em;
     padding-right: 1.5em;
 }
 
-body #main img {
+body main img {
     padding-top: .5em;
     padding-bottom: 1em;
 }
@@ -109,7 +109,7 @@ footer {
 
 footer hr {
     color: gray;
-    height: 2px;
+    border-style: solid;
 }
 
 footer ul {

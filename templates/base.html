@@ -13,8 +13,7 @@
 </head>
 <body>
 	{% block pre %}{% endblock %}
-	<div id="body">
-		<nav class="row-flex {% block nav %}{% endblock %}">
+	<nav class="row-flex {% block nav %}{% endblock %}">
 			<a class="row-flex" id="logo" href="#">
 				<img src="../images/logo.png" alt="Fultonic Entertainment Logo" />
 				<h1>Fultonic Entertainment</h1>
@@ -49,11 +48,10 @@
                     <a href="about.html">About Us</a>
                 </li>
 			</ul>
-		</nav>
+	</nav>
 
-		<div id="main">
-			{% block body %}{% endblock %}
-		</div>
-	</div>
+	<main>
+		{% block body %}{% endblock %}
+	</main>
 </body>
 </html>
