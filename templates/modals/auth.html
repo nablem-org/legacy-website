@@ -1,0 +1,103 @@
+<div id="auth-modal" data-section="auth-login">
+    <div class="close-button" onclick="authModalWrapper.hide();">
+        {% include "../svg/close-modal.svg" %}
+	</div>
+	
+	<div class="auth-modal-scrollable">
+        <div class="left-container">
+            <div class="auth-section" id="auth-register">
+                <h2 class="title">Create new Account.</h2>
+                <span class="auth-cta">Already a Member? <span onclick="authModalWrapper.changeSectionTo('auth-login');">Log In</span></span>
+                
+                <form class="form" action="/signin/" method="post">
+                    <div class="input-flex">
+                        <div class="input-group" tabindex="1">
+                            <div class="left-side">
+                                <input required class="input-control" type="text" name="first_name" id="signin_first_name" placeholder="First Name">
+                                <label class="input-label" for="signin_first_name">First Name</label>
+                            </div>
+                        </div>
+    
+                        <div class="input-group" tabindex="2">
+                            <div class="left-side">
+                                <input required class="input-control" type="text" name="last_name" id="signin_last_name" placeholder="Last Name">
+                                <label class="input-label" for="signin_last_name">Last Name</label>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="input-group" tabindex="3">
+                        <div class="left-side">
+                            <input required class="input-control" type="text" name="input" id="signin_name" placeholder="Username">
+                            <label class="input-label" for="signin_name">Username</label>
+                        </div>
+    
+                        <div class="right-side">
+                            {% include "../svg/user-icon.svg" %}
+                        </div>
+                    </div>
+    
+                    <div class="input-group" tabindex="4">
+                        <div class="left-side">
+                            <input required class="input-control" type="email" name="email" id="signin_email" placeholder="E-mail">
+                            <label class="input-label" for="signin_email">E-mail</label>
+                        </div>
+    
+                        <div class="right-side">
+                            {% include "../svg/email-icon.svg" %}
+                        </div>
+                    </div>
+    
+                    <div class="input-group" tabindex="5">
+                        <div class="left-side">
+                            <input required class="input-control" type="password" name="pwd" id="signin_pwd" placeholder="Password">
+                            <label class="input-label" for="signin_pwd">Password</label>
+                        </div>
+    
+                        <div class="right-side">
+                            {% include "../svg/pwd-icon.svg" %}
+                        </div>
+                    </div>
+    
+                    <div class="picture-input-group">
+                        <label class="picture-input-label" for="profile-picture-input">Profile Picture (512x512 recommended)</label>
+                        <input class="picture-input-control" type="file" name="profile" id="profile-picture-input">
+                    </div>
+    
+                    <input class="form-submit" type="submit" value="Register">
+                </form>
+            </div>
+    
+            <div class="auth-section" id="auth-login">
+                <h2 class="title">Welcome Back!</h2>
+                <span class="auth-cta">New here? <span onclick="authModalWrapper.changeSectionTo('auth-register');">Create an account</span></span>
+                
+                <form class="form" action="/login/" method="post">
+                    <div class="input-group" tabindex="4">
+                        <div class="left-side">
+                            <input required class="input-control" type="email" name="email" id="login_email" placeholder="E-mail">
+                            <label class="input-label" for="login_email">E-mail</label>
+                        </div>
+    
+                        <div class="right-side">
+                            {% include "../svg/email-icon.svg" %}
+                        </div>
+                    </div>
+    
+                    <div class="input-group" tabindex="5">
+                        <div class="left-side">
+                            <input required class="input-control" type="password" name="pwd" id="login_pwd" placeholder="Password">
+                            <label class="input-label" for="login_pwd">Password</label>
+                        </div>
+    
+                        <div class="right-side">
+                            {% include "../svg/pwd-icon.svg" %}
+                        </div>
+                    </div>
+    
+                    <input class="form-submit" type="submit" value="Log In">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
