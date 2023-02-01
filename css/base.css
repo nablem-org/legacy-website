@@ -56,10 +56,17 @@ nav {
     top: 0;
 }
 
-nav a {
+nav a,
+nav span {
     text-decoration: none;
     color: white;
     gap: 1em;
+}
+
+nav span {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 1.5em;
+    cursor: pointer;
 }
 
 nav h1 {
