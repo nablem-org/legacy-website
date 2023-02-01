@@ -1,0 +1,270 @@
+.auth-modal-wrapper,
+.auth-modal-wrapper * {
+    box-sizing: border-box;
+}
+
+.auth-modal-wrapper {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.auth-modal-wrapper.modal-visible {
+    display: flex;
+    animation-name: auth-modal-wrapper-visible-animation;
+    animation-duration: .2s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes auth-modal-wrapper-visible-animation {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.auth-modal-wrapper input {
+    /* This is forcing the inputs to become visible on other pages since they
+       are getting invisble on pages, except for the index. */
+    display: block;
+}
+
+#auth-modal {
+    position: relative;
+    width: 80vw;
+    height: 80vh;
+    max-width: 1136px;
+    /*background-color: #212121;*/
+    background-image:
+        linear-gradient(100deg, rgba(21, 21, 21, 1) 45%, rgba(255, 255, 255, 0) 100%),
+        url(../images/background.png),
+        linear-gradient(100deg, rgb(0, 0, 0), 0%, rgb(0, 0, 0) 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    border-radius: 10px;
+}
+
+.auth-modal-wrapper.modal-visible #auth-modal {
+    animation-name: auth-modal-visible-animation;
+    animation-duration: .2s;
+    animation-timing-function: cubic-bezier(.17, .67, .48, 2);
+}
+
+@keyframes auth-modal-visible-animation {
+    from {
+        transform: scale(0.9);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+.auth-modal-scrollable {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-left: 30px;
+    overflow: scroll;
+}
+
+.auth-section {
+    display: none;
+}
+
+.auth-section.auth-section-visible {
+    display: block;
+    animation-name: auth-section-visible-animation;
+    animation-duration: .2s;
+    animation-timing-function: cubic-bezier(.17, .67, .48, 2);
+}
+
+@keyframes auth-section-visible-animation {
+    from {
+        opacity: 0;
+        transform: translateX(-15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #212121;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform .2s, background .2s;
+    z-index: 1;
+}
+
+.close-button:hover {
+    background-color: rgb(173, 84, 84);
+    transform: scale(1.1);
+}
+
+.close-button svg {
+    width: 25%;
+    height: auto;
+    fill: white;
+}
+
+.left-container {
+    width: 40%;
+    margin-top: 30px;
+}
+
+.title {
+    font-size: 32px;
+    margin-bottom: 5px;
+    color: white;
+    font-family: 'Barlow', sans-serif;
+}
+
+.auth-cta {
+    color: white;
+}
+
+.auth-cta span {
+    color: #1d90f5;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.form {
+    margin-top: 30px;
+}
+
+.input-flex {
+    display: flex;
+    column-gap: 10px;
+}
+
+.input-flex .input-group:last-child .input-control {
+    border-radius: 0 10px 10px 0;
+}
+
+.input-group {
+    display: flex;
+    position: relative;
+    margin-bottom: 1.2em;
+    max-height: 49px;
+}
+
+.left-side {
+    flex: 1;
+}
+
+.right-side {
+    display: grid;
+    place-items: center;
+    padding: 0 15px;
+    border-radius: 0 10px 10px 0;
+    background-color: #333333;
+}
+
+.input-group:last-child {
+    margin-bottom: 0;
+}
+
+.input-control {
+    width: 100%;
+    height: 100%;
+    padding: 8px 0 8px 15px;
+    border-radius: 10px 0 0 10px;
+    border: none;
+    font-size: 0.88em;
+    outline: none;
+    color: white;
+    background-color: #333333;
+    font-family: inherit;
+}
+
+.input-control::placeholder {
+    color: transparent;
+}
+
+.input-label {
+    display: block;
+    width: fit-content;
+    cursor: text;
+    color: #bfbfbf;
+    font-size: 0.88em;
+    border-radius: 10px;
+    transform: translate(15px, -33px);
+    transform-origin: 0 0;
+    transition: transform .2s, background .2s, padding .2s;
+    user-select: none;
+}
+
+.input-control:focus+.input-label,
+.input-control:not(:placeholder-shown)+.input-label {
+    padding: 5px 10px;
+    transform: translate(10px, -65px) scale(0.8);
+    background-color: rgba(21, 21, 21, 1);
+    cursor: default;
+}
+
+.input-icon {
+    width: 16px;
+    height: auto;
+    fill: white;
+}
+
+.picture-input-group {
+    margin-bottom: 20px;
+}
+
+.picture-input-label {
+    display: block;
+    width: fit-content;
+    cursor: default;
+    color: #bfbfbf;
+    font-size: 0.88em;
+    user-select: none;
+}
+
+.picture-icon {
+    width: 16px;
+    fill: rgba(255, 255, 255, 0.5);
+}
+
+.form-submit {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-radius: 10px;
+    background-color: #1d90f5;
+    color: white;
+    font-family: inherit;
+    font-weight: bold;
+    transition: transform .2s, background .2s;
+    cursor: pointer;
+}
+
+.form-submit:hover {
+    background-color: #187fd9;
+    transform: scale(1.05);
+}
