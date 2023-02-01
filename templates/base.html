@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/fonts.css">
     <link rel="stylesheet" href="../css/base.css">
+	<link rel="stylesheet" href="../css/modal.css">
 	<link rel="stylesheet" href="../css/sites/{% block style %}{% endblock %}.css">
 	{% block head %}{% endblock %}
+	<script src="../js/modal.js"></script>
     <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
     <title>Fultonic Entertainment</title>
 </head>
@@ -37,11 +39,11 @@
 				</li>
 
 				<li>
-					<a href="signin.html">Sign In</a>
+					<span onclick="authModalWrapper.show('auth-register');">Sign In</span>
 				</li>
 
 				<li>
-					<a href="login.html">Log In</a>
+					<span onclick="authModalWrapper.show('auth-login');">Log In</span>
 				</li>
 
                 <li>
@@ -53,5 +55,9 @@
 	<main>
 		{% block body %}{% endblock %}
 	</main>
+
+	<div class="auth-modal-wrapper" id="auth-modal-wrapper" data-active-modal="auth-modal">
+		{% include "modals/auth.html" %}
+	</div>
 </body>
 </html>
