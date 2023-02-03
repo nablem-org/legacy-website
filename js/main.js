@@ -103,7 +103,74 @@ function start() {
 	fadeElement("Video", "video", 0, 1, 0.05, 200, true);
 }
 
+/*** Popup Interactivity  ***/
+
+/** @param base {HTMLElement} */
+function contentVotingLoaded(base) {
+	let like = base.querySelector('button[data-type="like"]');
+	let dislike = base.querySelector('button[data-type="dislike"]');
+
+	function contentVoteBtnClicked() {
+		let type = this.dataset.type;
+		this.toggleAttribute("data-selected");
+		if (!this.hasAttribute("data-selected")) return;
+
+		switch (type) {
+			case "like":
+				dislike.removeAttribute("data-selected");
+				break;
+			case "dislike":
+				like.removeAttribute("data-selected");
+				break;
+		}
+	}
+
+	[like, dislike].forEach(e => e.onclick = contentVoteBtnClicked);
+}
+
+function commentSectionLoaded(base) {
+	console.log(base.children);
+	let list = base.querySelector("div.comment-section ul.comment-list");
+	console.log(list);
+	let form = base.querySelector("form.comment-form");
+
+	let formInputs = {
+		username: form.querySelector("input[name=username]"),
+		message: form.querySelector("input[name=message]")
+	};
+
+	/**
+	 * TODO: In the mean time, we will be using innerHTML to create the
+	 *       element. But we need to change this since it's unsafe.
+	 */
+	function createMessageElement(username, message) {
+		let el = document.createElement('li');
+		el.innerHTML = `<strong>${username}</strong>: ${message}`;
+		return el;
+	}
+
+	form.onsubmit = function (event) {
+		event.preventDefault();
+
+		let username = formInputs.username.value;
+		let message = formInputs.message.value;
+
+		let messageElement = createMessageElement(username, message);
+		list.append(messageElement);
+
+		formInputs.message.value = "";
+	}
+}
+
 window.onload = async function () {
+	for (let vote of document.querySelectorAll(".content-voting")) {
+		contentVotingLoaded(vote);
+	}
+
+	for (let comment of document.querySelectorAll(".comment-section")) {
+		commentSectionLoaded(comment);
+	}
+
 	for (let item in items) {
 		let obj = items[item];
 		obj.element = document.getElementById(obj.elementId);
