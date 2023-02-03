@@ -231,8 +231,102 @@ section div h3 {
 	width: 48em;
 }
 
+/* || Popup Interactivity */
+
+.popup-interactivity * {
+	box-sizing: border-box;
+}
+
+.popup-interactivity hr {
+	margin: 15px 0;
+	border: solid 1px #151515;
+}
+
+.content-voting {
+	display: flex;
+	column-gap: 15px;
+}
+
+.content-vote-btn {
+	display: grid;
+	place-items: center;
+	width: 48px;
+	height: 48px;
+	border: none;
+	border-radius: 50px;
+	outline: none;
+	color: white;
+	background-color: rgba(0, 0, 0, .3);
+	font-family: 'Poppins', sans-serif;
+	font-size: 26px;
+	transition: background .2s, transform .2s;
+}
+
+.content-vote-btn:not([data-selected]):hover {
+	transform: scale(1.05);
+	transform-origin: center center;
+	background-color: rgba(0, 0, 0, .5);
+}
+
+.content-vote-btn svg {
+	width: 40%;
+	height: auto;
+	fill: white;
+}
+
+.content-vote-btn[data-selected] {
+	animation-name: pop-vote-btn;
+	animation-duration: .2s;
+	animation-timing-function: cubic-bezier(.18, -1, .5, 1.94);
+}
+
+.comment-list li {
+	text-align: left;
+}
+
+.comment-form {
+	display: flex;
+	column-gap: 5px;
+}
+
+.comment-form input[type=text] {
+	flex: 1;
+	padding: 10px 15px;
+	border: none;
+	border-radius: 10px;
+	outline: none;
+	background-color: #1c1c1c;
+	color: white;
+}
+
+.comment-form input[type=submit] {
+	flex: 0.15;
+	border: none;
+	border-radius: 10px;
+	color: white;
+	background-color: #575757;
+}
+
+@keyframes pop-vote-btn {
+	from {
+		transform: scale(1.1);
+	}
+
+	to {
+		transform: scale(1);
+	}
+}
+
+.content-vote-btn.red-tone[data-selected] svg {
+	fill: red;
+}
+
+.content-vote-btn.blue-tone[data-selected] svg {
+	fill: #4463ca;
+}
+
 /* Collapsible comments section; adapted from [1 & 2] */
-.popup .comments {
+/* .popup .comments {
 }
 
 .popup .comments .content {
@@ -264,7 +358,7 @@ section div h3 {
 }
 
 .popup .comment .profile {
-}
+} */
 
 .popup .profile img {
 	border-radius: 1em;
