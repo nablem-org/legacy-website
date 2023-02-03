@@ -289,22 +289,34 @@ section div h3 {
 	column-gap: 5px;
 }
 
+.comment-form input {
+	font-family: 'Poppins', sans-serif;
+}
+
 .comment-form input[type=text] {
 	flex: 1;
 	padding: 10px 15px;
 	border: none;
 	border-radius: 10px;
 	outline: none;
+	font-size: 20px;
 	background-color: #1c1c1c;
 	color: white;
 }
 
 .comment-form input[type=submit] {
 	flex: 0.15;
+	max-width: 80px;
 	border: none;
 	border-radius: 10px;
 	color: white;
 	background-color: #575757;
+	transition: background .2s, transform .2s;
+}
+
+.comment-form input[type=submit]:hover {
+	transform: scale(1.05);
+	background-color: #3a3a3a;
 }
 
 @keyframes pop-vote-btn {
