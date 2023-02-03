@@ -129,9 +129,7 @@ function contentVotingLoaded(base) {
 }
 
 function commentSectionLoaded(base) {
-	console.log(base.children);
 	let list = base.querySelector("div.comment-section ul.comment-list");
-	console.log(list);
 	let form = base.querySelector("form.comment-form");
 
 	let formInputs = {
@@ -145,7 +143,11 @@ function commentSectionLoaded(base) {
 	 */
 	function createMessageElement(username, message) {
 		let el = document.createElement('li');
-		el.innerHTML = `<strong>${username}</strong>: ${message}`;
+		let now = new Date();
+		let pad = (n) => n.toString().padStart(2, '0');
+		let date = `${pad(now.getMonth())}/${pad(now.getDay())}/${now.getFullYear()}`;
+		let time = `${pad(now.getHours())}:${pad(now.getMinutes())}`;
+		el.innerHTML = `(${date} ${time}) <strong>${username}</strong>: ${message}`;
 		return el;
 	}
 
