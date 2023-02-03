@@ -1,0 +1,20 @@
+<div class="popup-interactivity">
+    <div class="content-voting">
+        <button class="content-vote-btn red-tone" data-type="like">{% include "../svg/like.svg" %}</button>
+        <button class="content-vote-btn blue-tone" data-type="dislike">{% include "../svg/dislike.svg" %}</button>
+    </div>
+
+    <hr>
+
+    <div class="comment-section">
+        <h3>Comments</h3>
+        
+        <ul class="comment-list"></ul>
+
+        <form class="comment-form">
+            <input type="hidden" name="username" value="Anon">
+            <input type="text" name="message" required autocomplete="off" placeholder="What are your thoughts on this work piece?">
+            <input type="submit" value="Send">
+        </form>
+    </div>
+</div>
