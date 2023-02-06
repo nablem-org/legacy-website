@@ -1,8 +1,34 @@
+/* || Common */
+
 *,
 *::after,
 *::before {
     box-sizing: border-box;
 }
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+* i {
+    margin-right: .2em;
+}
+
+hr {
+    margin-bottom: 1em;
+}
+
+.active {
+    font-style: italic;
+}
+
+html {
+    background-color: black;
+    color: white;
+}
+
+/* || Flexbox Shorthands */
 
 .flex-row {
     display: flex;
@@ -18,19 +44,7 @@
     display: none;
 }
 
-* {
-    margin: 0px;
-    padding: 0px;
-}
-
-html {
-    background-color: black;
-    color: white;
-}
-
-body {
-    margin: 1em;
-}
+/* || Main Content */
 
 body main {
     margin: 1em;
@@ -53,64 +67,57 @@ body main img {
     padding-bottom: 1em;
 }
 
-a {
-    text-decoration: none;
-    color: white;
-}
 
-nav {
+
+/* || Main Header */
+
+.main-header {
+    top: 0;
+    width: 100%;
+    padding: 2em 2.5em 2em 2.5em;
+    z-index: 1;
     justify-content: space-between;
     background-color: black;
-    z-index: 1;
-    top: 0;
 }
 
-nav a {
-    text-decoration: none;
-    color: white;
+/* || Main Header || Brand */
+
+.brand {
     gap: 1em;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-weight: 700;
 }
 
-nav h1 {
-    font-family: 'Ubuntu Condensed', sans-serif;
+.brand-name {
     position: relative;
-    height: 1.25em;
     font-size: 2em;
 }
 
-* ul {
-    position: relative;
-    padding-bottom: 5px;
-    list-style: none;
-    margin-right: 1em;
-    gap: 1.5em;
-}
-
-* ul a {
-    font-family: 'Ubuntu Condensed', sans-serif;
-    font-size: 1.5em;
-}
-
-* i {
-    margin-right: .2em;
-}
-
-hr {
-    margin-bottom: 1em;
-}
-
-.active {
-    font-style: italic;
-}
-
-#logo img {
+.brand-img {
     margin-left: -.3em;
     padding: .25em;
-    width: 2em;
+    width: 3em;
     height: auto;
     border-radius: 50%;
     border: 5px solid rgb(75, 75, 75);
 }
+
+/* || Main Header || Main Navbar */
+
+.main-navbar {
+    background-color: black;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 1.5em;
+}
+
+.main-navbar-list {
+    position: relative;
+    padding-bottom: 5px;
+    list-style: none;
+    gap: 1em;
+}
+
+/* || Footer */
 
 footer {
     margin-top: 1em;
