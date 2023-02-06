@@ -13,12 +13,14 @@
 </head>
 <body>
 	{% block pre %}{% endblock %}
-	<nav class="flex-row flex-center {% block nav %}{% endblock %}">
-			<a class="flex-row flex-center" id="logo" href="#">
-				<img src="../images/logo.png" alt="Fultonic Entertainment Logo" />
-				<h1>Fultonic Entertainment</h1>
-			</a>
+	
+	<header class="main-header {% block nav %}{% endblock %}">
+		<a class="flex-row flex-center" id="logo" href="#">
+			<img src="../images/logo.png" alt="Fultonic Entertainment Logo" />
+			<h1>Fultonic Entertainment</h1>
+		</a>
 
+		<nav class="main-navbar flex-row flex-center">
 			<ul class="flex-row flex-center" id="nav">
 				<li>
 					<a href="index.html">Home</a>
@@ -48,7 +50,8 @@
                     <a href="about.html">About Us</a>
                 </li>
 			</ul>
-	</nav>
+		</nav>
+	</header>
 
 	<main>
 		{% block body %}{% endblock %}
