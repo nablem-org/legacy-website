@@ -1,14 +1,5 @@
 .index {
 	position: fixed;
-	padding-bottom: 1em;
-	padding-top: 2em;
-	padding-left: 2em;
-	padding-right: 1em;
-	width: 97%;
-}
-
-.index ul {
-	margin-right: 2em;
 }
 
 #banner {
@@ -232,8 +223,7 @@ section div h3 {
 }
 
 /* Collapsible comments section; adapted from [1 & 2] */
-.popup .comments {
-}
+.popup .comments {}
 
 .popup .comments .content {
 	padding: 0 10px;
@@ -251,20 +241,18 @@ section div h3 {
 	content: '+';
 }
 
-.popup .comments input:checked + label:after {
+.popup .comments input:checked+label:after {
 	content: "\2013";
 }
 
-.popup .comments input:checked + label + .content {
+.popup .comments input:checked+label+.content {
 	max-height: 200px;
 	padding: 10px 10px 20px;
 }
 
-.popup .comment {
-}
+.popup .comment {}
 
-.popup .comment .profile {
-}
+.popup .comment .profile {}
 
 .popup .profile img {
 	border-radius: 1em;
