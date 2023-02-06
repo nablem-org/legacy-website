@@ -13,3 +13,6 @@ debug/
 src/archive.rs
 
 Cargo.lock
+
+# Ignore files
+ignore-*
