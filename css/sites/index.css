@@ -62,17 +62,24 @@
 }
 
 .content-section-heading {
+	margin-bottom: .7em;
+	font-family: 'Barlow', sans-serif;
 	font-size: 3em !important;
+	font-weight: 700;
 }
 
 .content-genre-heading {
+	margin-bottom: .5em;
+	font-family: 'Unbounded', sans-serif;
 	font-size: 1.75em;
+	font-weight: 700;
 }
 
 .content-item-heading {
 	margin-bottom: .5em;
 	text-align: center;
 	font-family: 'Unbounded', sans-serif;
+	font-weight: 700;
 }
 
 .content-genre {
