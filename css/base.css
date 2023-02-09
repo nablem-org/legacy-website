@@ -46,23 +46,23 @@ html {
 
 /* || Main Content */
 
-body main {
+main {
     margin: 1em;
 }
 
-body main h1 {
+main h1 {
     font-family: 'Barlow', sans-serif;
     padding-bottom: .5em;
 }
 
-body main p {
+main p {
     font-family: 'Poppins', sans-serif;
     font-size: 0.99em;
     padding-bottom: 1em;
     padding-right: 1.5em;
 }
 
-body main img {
+main img {
     padding-top: .5em;
     padding-bottom: 1em;
 }
