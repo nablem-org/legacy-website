@@ -1,4 +1,5 @@
 .index {
+	/* TODO: It might be better if we use sticky as position for the header. */
 	position: fixed;
 }
 
@@ -28,7 +29,7 @@
 	padding-left: 1em;
 	padding-right: 1em;
 	z-index: 0;
-	width: 100%;
+	/* TODO: Gotta remove this relative position 'cause it messes with the layout. */
 	position: relative;
 	top: 450px;
 }
@@ -60,47 +61,44 @@
 	/* Apply negative top and left margins to truly center the element */
 }
 
-section h1 {
+.content-section-heading {
 	font-size: 3em !important;
 }
 
-section h2 {
+.content-genre-heading {
 	font-size: 1.75em;
 }
 
-section h3 {
+.content-item-heading {
+	margin-bottom: .5em;
+	text-align: center;
 	font-family: 'Unbounded', sans-serif;
-	margin-bottom: .5em
 }
 
-section div {
+.content-genre {
 	margin-bottom: 1em;
 }
 
-section div div {
+.content-genre-slider {
 	display: flex;
 	gap: 1em;
-	overflow: auto;
+	overflow-x: auto;
 	white-space: nowrap;
 }
 
-section div .slider .item {
-	background-color: #292929;
-	border-radius: .5em;
-	padding: .5em 1em;
+.content-item {
 	display: flex;
+	min-width: 300px;
+	padding: .5em 1em;
+	border-radius: .5em;
 	flex-direction: column;
 	align-items: center;
+	background-color: #292929;
 }
 
-section div img {
+.content-item-banner {
 	border-radius: 1em;
 	width: 15em;
-}
-
-section div h3 {
-	text-align: center;
-	text-align: center
 }
 
 #music .item div {
