@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "../base.html" %}
 
 {% block style %}index{% endblock %}
 
@@ -23,8 +23,8 @@
 	</div>
 
 	<div class="content-wrapper" id="content">
-		{% include "ui.html" %}
-		{% include "footer.html" %}
+		{% include "../ui.html" %}
+		{% include "../footer.html" %}
 	</div>
 
 	<div id="popup-dead" class="popup">
@@ -41,7 +41,7 @@
 	</div>
 
 	<div id="popup-xenon" class="popup">
-		{% include "../svg/x.svg" %}
+		{% include "../../svg/x.svg" %}
 		<img src="../images/xenon-banner.png" alt="Xenon Warriors Banner">
 		<div class="inner">
 			<div class="preview invisible">
@@ -75,7 +75,7 @@
 
 
 	<div id="speaker">
-		{% include "../svg/speaker.svg" %}
-		{% include "../svg/no-speaker.svg" %}
+		{% include "../../svg/speaker.svg" %}
+		{% include "../../svg/no-speaker.svg" %}
 	</div>
 {% endblock %}
