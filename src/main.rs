@@ -7,15 +7,15 @@ use askama::Template;
 use std::fs;
 
 #[derive(Template)]
-#[template(path = "index.html")]
+#[template(path = "pages/index.html")]
 struct Index {}
 
 #[derive(Template)]
-#[template(path = "about.html")]
+#[template(path = "pages/about.html")]
 struct AboutUs {}
 
 #[derive(Template)]
-#[template(path = "games.html")]
+#[template(path = "pages/games.html")]
 struct Games {}
 
 /// Renders each HTML template into HTML files fit for deployment
@@ -29,6 +29,10 @@ fn render() -> BoxError {
         if file("html") {
             error(">>> html is a file!");
         }
+        // Removing the html folder because of the UI bug of not writing
+        // changes to the templates.
+        fs::remove_dir_all("html")?;
+        fs::create_dir("html")?;
     }
 
     // Renders each template into HTML, and writes the output into a file
