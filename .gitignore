@@ -14,5 +14,5 @@ src/archive.rs
 
 Cargo.lock
 
-# John
-uplog.md
+# Ignore files
+ignore-*
